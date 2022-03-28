@@ -1,0 +1,46 @@
+FUNCTION Dot() : Integer
+VAR
+    tab:=v1 integer[3],v2 integer[3],v3 integer[3];
+    i:= integer;
+
+BEGIN
+    Write("donner votre 1er vecteur");
+    read(v1);
+    Write("donner votre 2eme vecteur");
+    read(v2);
+    FOR i FROM 0 TO 2 STEP step 1  DO
+        v3[i]=v1[i]*v2[i];
+    END_FOR
+
+
+
+    RETURN v3;
+END
+
+PROCEDURE test( j,s:= integer)
+VAR
+
+BEGIN
+
+Dot();
+j,s:=0;
+FOR j FROM 0 TO 2 STEP 1  DO
+    s=s+v3[j]
+END_FOR
+IF (s=0) THEN
+    Write("v1 et v2 sont orthogonal");
+
+ELSE
+    Write("v1 et v2 ne sont pas orthogonal");
+
+END_IF
+END
+
+
+
+
+
+ALGORITHM Dot_Product
+
+test();
+END
